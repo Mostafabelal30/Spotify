@@ -20,12 +20,12 @@ export default (state = INIT_STATE, action) => {
       };
     case ActionTypes.GET_TRACK_LIST:
       console.log('action.dataaction.data', action.data);
-      const asd = action.data.sort((a, b) =>
+      const tracks = [...new Set(action.data)].sort((a, b) =>
         a.track.name.localeCompare(b.track.name),
       );
       // [...new Set(action.data)]
-      console.log('[...new Set(action.data)] ', asd);
-      return {...state, trackList: asd};
+      console.log('[...new Set(action.data)] ', tracks);
+      return {...state, trackList: tracks};
     default:
       return state;
   }

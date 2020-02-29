@@ -29,7 +29,8 @@ function handleRequestError(data) {
 }
 
 export const Backend = {
-  token: 'BQCE-d7G-BvaB389qkY0mVNXeCpscf1rrYvtmoL0xRcNCp119-xtoEGeBMCkBPZ_YEbnOWEtRdlOKLIFzZFQ-ABVMNPWVMK_vNZHVubtBdRjqpVPxq6AnE4Y2UcJwTpWebhAFquqL4YzbyOLavPlsN8VfAg33Qr06wn1vTJPW4UuIeM0JPXpeaMUznI',
+  token:
+    'BQBxvPDCF6yUZcd9NFVB_0-aOJGgDqg9-54DCrv4vBXqDDBvjG_x4QsMpnmvDGr_--5sRv4ommRXZ5S-FByrFe1mihkaOv8hRZXAD02WR5BD8cFvxmAZfFSxpqb8WWbdIiuMnWcQc6Wb4k9kxTl4az3cA3iC0v0dp6MLYjDCVYOXlsXKs7seTNL9FXg',
   lang: I18nManager.isRTL ? 'ar' : 'en',
 
   getPlayList(page) {
@@ -65,10 +66,11 @@ export const Backend = {
         },
       })
       .then(function(response) {
-        console.log('responseresponseresponseresponseresponse', response.data);
+        console.log('responseresponseresponseresponseresponse', response);
         return response;
       })
       .catch(function(err) {
+        console.log('errerrerrerrerrerr', err.response);
         const response = err.response ? err.response.data : undefined;
         // console.log('errerrerrerrerrerr', err);
         handleRequestError(response);

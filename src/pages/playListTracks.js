@@ -34,7 +34,7 @@ class PlayListTracks extends Component {
   renderItem({item}) {
     console.log('itemitemitem', item);
 
-    const {radioTextStyle, contentContainerStyle, moreIconStyle} = styles;
+    const {radioTextStyle, contentContainerStyle} = styles;
 
     return (
       <View style={contentContainerStyle}>
@@ -50,12 +50,7 @@ class PlayListTracks extends Component {
     const {trackList} = this.props;
     return (
       <Container>
-        <FlatList
-          data={trackList}
-          onEndReached={alert('aa')}
-          onEndReachedThreshold={0.5}
-          renderItem={this.renderItem}
-        />
+        <FlatList data={trackList} renderItem={this.renderItem} />
       </Container>
     );
   }
@@ -72,11 +67,6 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(30),
     textAlign: 'center',
     marginTop: verticalScale(20),
-  },
-  moreIconStyle: {
-    width: width * 0.2,
-    height: width * 0.2,
-    marginHorizontal: width * 0.03,
   },
 });
 

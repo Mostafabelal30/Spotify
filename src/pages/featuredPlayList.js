@@ -56,12 +56,12 @@ class FeaturedPlayList extends Component {
     return (
       <Container>
         <FlatList
-          style={{flex: 1, width}}
-          // contentContainerStyle={[listContentContainer]}
+          style={{flex: 1, width: width * 0.9}}
           data={featuredPlayList}
           onEndReachedThreshold={0.5}
           onEndReached={this.onEndReached}
           renderItem={this.renderItem}
+          showsVerticalScrollIndicator={false}
         />
       </Container>
     );
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   moreIconStyle: {
     width: width * 0.2,
-    height: width * 0.5,
+    height: width * 0.2,
     marginHorizontal: width * 0.03,
   },
 });
