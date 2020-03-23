@@ -36,6 +36,8 @@ target 'PropertyWatch' do
 
   pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
 
+  pod 'KontaktBeacons', :path => '../node_modules/react-native-kontaktio'
+
   target 'PropertyWatchTests' do
     inherit! :search_paths
     # Pods for testing
